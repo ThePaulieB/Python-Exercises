@@ -1,0 +1,89 @@
+
+
+#Try at home:
+#Python function to find the factorial of a number
+#Python function to check if a number is palindrome or not
+#Write a Python function to check whether a number falls within a given range.
+#Write a Python function that accepts a string and counts the number of upper and lower case letters.
+#Write a Python function that takes a list and returns a new list with distinct elements from the first list.
+#Write a Python program to print the even numbers from a given list.
+
+#find factorial
+
+n = 10
+
+def find_factorial(var1):
+    fact = 1
+    for i in range(1, n + 1):
+        fact = fact * i
+    return fact
+
+find_factorial(n)
+
+# Find if a number/string is a palindrome
+
+def is_palindrome(var1):
+    result = var1 == var1[::-1]
+    return result
+
+string1 = 'bob'
+
+print(is_palindrome(string1))
+
+#- Write a Python function to check whether a number falls within a given range.
+
+def in_range(var1, var2):
+    if var1 in var2:
+        result = 'Present'
+    else:
+        result = 'Not Present'
+    return result
+
+number1 = 5
+check_range = range(10)
+
+print(in_range(number1, check_range))
+
+# Write a Python function that accepts a string and counts the number of upper and lower case letters.
+
+def count_letters(var1):
+    count_upper = 0
+    count_lower = 0
+    for i in var1:
+        if i.isupper() == True:
+            count_upper += 1
+        else:
+            count_lower += 1
+    return print('Upper case letters: ', count_upper, '\nLower case letters: ', count_lower)
+
+check_string = 'Here Is a Test Sentence'
+
+count_letters(check_string)
+
+#Write a Python function that takes a list and returns a new list with distinct elements from the first list.
+
+def unique_list(var1):
+    output = []
+    for i in var1:
+        if i not in output:
+            output.append(i)
+    return output
+
+list1 = [1, 1, 3, 5, 6, 1, 6, 7, 8, 9, 10]
+
+print(unique_list(list1))
+
+#Write a Python program to print the even numbers from a given list.
+
+def even_list(var1):
+    output = []
+    for i in var1:
+        if (i % 2) == 0:
+            output.append(i)
+    return output
+
+list1 = [1, 1, 3, 5, 6, 1, 6, 7, 8, 9, 10]
+
+print(even_list(list1))
+
+
